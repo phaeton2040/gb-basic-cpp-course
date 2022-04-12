@@ -42,7 +42,7 @@ struct CurrentValueType {
 
 std::string GetCurrentValueType(CurrentValueType t);
 
-int main() {
+int lesson2() {
 
     /** Задание 1
      * Создать и инициализировать переменные пройденных типов данных (short int, int, long long, char, bool, float, double)
