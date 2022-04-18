@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdarg.h>
 
 using namespace std;
 
@@ -8,7 +9,7 @@ using namespace std;
 
 /** Задание 1 */
 template<typename T>
-void PrintArray(T *arr, const size_t SIZE, const string& separator) {
+void PrintArray(T *arr, const size_t SIZE, const string& separator = " ") {
     if (!arr || SIZE == 0) {
         cout << "Function params are invalid" << endl;
         return;
@@ -50,6 +51,18 @@ void ShiftArray(T &arr, int n, T &outArray, const size_t SIZE) {
     }
 
     arr[0] = first;
+}
+
+template<typename T>
+void FillArray(T *arr, int count, ...) {
+    va_list arguments;
+    va_start(arguments, count);
+
+    for (int i = 0; i < count; i++) {
+        arr[i] = va_arg(arguments, T);
+    }
+
+    va_end(arguments);
 }
 
 #endif //CPPBASIC_ARRAYFUNCTIONS_HPP
