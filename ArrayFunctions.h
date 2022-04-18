@@ -14,6 +14,9 @@ void PrintArray(T *arr, int SIZE, const string& separator);
 template<typename T>
 void ShiftArray(T &arr, int n, T &outArray, size_t SIZE);
 
+template<typename T>
+void FillArray(T *arr, int count, ...);
+
 void SwapArraySymbols(int *arr, size_t SIZE);
 bool CheckBalance(int *arr, size_t SIZE);
 

@@ -17,9 +17,7 @@ int main() {
 
     cout << "Old array: ";
 
-    for (auto& elem : arr2) {
-        printf("%u ", elem);
-    }
+    PrintArray(arr2, size2, ", ");
 
     cout << endl;
 
@@ -27,12 +25,19 @@ int main() {
 
     cout << "New array: ";
 
-    for (auto& elem : arr2) {
-        printf("%u ", elem);
-    }
+    PrintArray(arr2, size2, ", ");
 
     cout << endl;
 
+    /** Задание 3 */
+    const size_t size3 = 8;
+    int arr3[size3] {0};
+    FillArray(arr3, 10, 1, 4, 7, 10, 13, 16, 19, 22);
+
+    cout << "Fill array: " << endl;
+    PrintArray(arr3, size3);
+
+    /** Задание 4 */
     const size_t size4{10};
     int arr4[size4]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int resArr[size4]{ 0 };
@@ -55,6 +60,7 @@ int main() {
     PrintArray(arr5, size4, ", ");
     PrintArray(resArr2, size4, ", ");
 
+    /** Задание 5 */
     const size_t BALANCE_SIZE = 5;
     int balanceArr[BALANCE_SIZE]{2,2,3,5,6};
 
