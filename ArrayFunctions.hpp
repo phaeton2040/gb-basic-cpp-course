@@ -8,7 +8,7 @@ using namespace std;
 
 /** Задание 1 */
 template<typename T>
-void PrintArray(T *arr, const int SIZE, const string& separator) {
+void PrintArray(T *arr, const size_t SIZE, const string& separator) {
     if (!arr || SIZE == 0) {
         cout << "Function params are invalid" << endl;
         return;
