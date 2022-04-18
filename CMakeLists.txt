@@ -3,4 +3,8 @@ project(CPPBasic)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(CPPBasic lesson2.cpp lesson3.cpp lesson3-externals.cpp lesson4.cpp lesson4-functions.cpp lesson4-functions-header.h)
+INCLUDE_DIRECTORIES("${CMAKE_CURRENT_BINARY_DIR}")
+ADD_LIBRARY(ArrayFunctions SHARED ArrayFunctions.cpp ArrayFunctions.h ArrayFunctions.hpp)
+
+ADD_EXECUTABLE(lesson5 lesson5.cpp)
+TARGET_LINK_LIBRARIES(lesson5 ArrayFunctions)
